@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://kit.fontawesome.com/39bbe9b596.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1 id="title" class="title">Adaptable Design</h1>
+            <p id="advertImg" class="img-1">
+                <img src="./images/advert.jpg" alt="advert">
+            </p>
+            <details class="menu">
+                <summary>menu</summary>
+                <div class="block">
+                    <div class="block-item">
+                        <button onclick="mainFunc('dark-theme')" ><i class="fa-solid fa-moon"></i></button>
+                        <button onclick="mainFunc('light-theme')" ><i class="fa-regular fa-moon"></i></button>
+                    </div>
+                    <br>
+                    <div class="block-item">
+                        <button onclick="mainFunc('plusSize')"><i class="fa-solid fa-plus"></i></button>
+                        <button onclick="mainFunc('defaultSize')"><i class="fa-solid fa-refresh"></i></button>
+                        <button onclick="mainFunc('minusSize')" ><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                    <br>
+                    <div class="block-item">
+                        <button onclick="mainFunc('stopAnimation')" ><i class="fa-solid fa-toggle-off"></i></button>
+                        <button onclick="mainFunc('startAnimation')" ><i class="fa-solid fa-toggle-on"></i></button>
+                    </div>
+                    <br>
+                    <div class="block-item languages">
+                        <button onclick="mainFunc('toLV')" ><img src="./images/Flag_of_Latvia.svg.png" alt="latvian"></button>
+                        <button onclick="mainFunc('toEN')" ><img src="./images/Flag_of_the_United_Kingdom.png" alt="english"></button>
+                        <button onclick="mainFunc('toRU')" ><img src="./images/Flag_of_Russia.svg.png" alt="russian"></button>
+                    </div>
+                    <br>
+                    <button onclick="mainFunc('resetAll')" ><i class="fa-solid fa-refresh"></i></button>
+                </div>
+            </details>
+    
+            <div class="text-block">
+                <p id="myText1">Light colors have a unique ability to influence a person's emotional state. They create an atmosphere of lightness, joy, and optimism. For example, yellow is associated with the sun and warmth, giving a sense of joy and energy. Blue has a calming effect and creates a feeling of freshness, like after a clear summer day. Green is associated with nature and tranquility.</p>
+                <p id="myText2">Animations on a website enhance the user experience, making the content more engaging and interesting. For instance, the fade-in animation can make the appearance of elements smoother and more pleasing to the eye.</p>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            &copy; Alexander Kuznecov 2023
+        </footer>
+
+        <script src="./scripts/app.js"></script>
+    </body>
+</html>

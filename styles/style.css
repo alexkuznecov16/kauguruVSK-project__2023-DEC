@@ -1,0 +1,174 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: 0;
+	text-align: center;
+}
+body {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	background-color: aquamarine;
+}
+
+body.dark-theme {
+	background-color: #2a2a2a;
+	color: #fff;
+}
+
+body.dark-theme .text-block p {
+	background-color: #413232;
+}
+
+/* Wrapper ======================================================================================= */
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh - 100px);
+	justify-content: center;
+	align-items: center;
+	gap: 70px;
+	padding: 100px 0;
+}
+
+/*! Image */
+@keyframes simpleAnimation {
+	from {
+		top: 20px;
+	}
+	to {
+		top: calc(100vh - (clamp(150px, 30%, 700px) + 60px));
+	}
+}
+
+.img-1 {
+	width: clamp(100px, 25%, 700px);
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	animation: simpleAnimation 8s infinite alternate;
+	transition: 0.3s linear;
+	cursor: pointer;
+}
+
+img {
+	width: 100%;
+}
+
+.img-1:hover::after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	content: 'Reklama';
+	z-index: 10000000;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 0, 0, 0.6);
+}
+
+.img-1:hover {
+	animation-play-state: paused;
+}
+
+/*! Settings menu */
+.menu {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	height: max(10px);
+}
+
+.block {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid;
+	border-radius: 25px;
+	padding: 22px;
+	margin-top: 7px;
+	background-color: antiquewhite;
+}
+
+summary {
+	padding: 10px 13px;
+	border: 1px solid;
+	border-radius: 12px;
+	width: clamp(50px, 10vw, 600px);
+	background: aqua;
+}
+
+summary:hover {
+	background-color: antiquewhite;
+	cursor: pointer;
+}
+
+.block-item {
+	display: flex;
+	gap: 5px;
+}
+
+.block button {
+	padding: 7px 3px;
+	cursor: pointer;
+	border: 1px solid;
+	border-radius: 2px;
+}
+
+.block button:hover {
+	background-color: red;
+}
+
+.block-item.languages button {
+	max-width: 27px;
+}
+
+.block-item.languages button img {
+	width: clamp(6px, 70%, 50px);
+}
+
+/*! Text block */
+
+.text-block {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 10px 20px;
+}
+
+.text-block p {
+	font-size: clamp(8px, 4vw, 32px);
+	padding: 5px;
+	border: 1px solid;
+	border-radius: 12px;
+	background-color: aliceblue;
+}
+
+.small-size {
+	font-size: clamp(5px, 4vw, 20px) !important;
+}
+
+.big-size {
+	font-size: clamp(16px, 4vw, 40px) !important;
+}
+
+/* Footer ======================================================================================= */
+footer.footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: bisque;
+	font-size: clamp(6px, 3vw, 34px);
+}
+
+body.dark-theme footer.footer {
+	background-color: rgb(53, 38, 38);
+	color: aliceblue;
+}
