@@ -94,6 +94,7 @@ img {
 	padding: 22px;
 	margin-top: 7px;
 	background-color: antiquewhite;
+	gap: 5px;
 }
 
 summary {
